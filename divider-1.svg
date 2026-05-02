@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7000 160">
+  <defs>
+    <filter id="glow" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bloom" x="-60%" y="-300%" width="220%" height="700%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bloom2" x="-100%" y="-400%" width="300%" height="900%">
+      <feGaussianBlur stdDeviation="26" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!--
+    ViewBox: 7000 x 160, centerline y=80, center x=3500
+    All previous coords scaled ~3.18x (2200->7000, 52->160)
+    Cluster stays bunched in center region ~2790-4220
+  -->
+
+  <!-- === LINES === -->
+  <line x1="20"   y1="80" x2="2785" y2="80" stroke="#00FFFF" stroke-width="3"   opacity="0.5"  filter="url(#glow)"/>
+  <line x1="2880" y1="80" x2="3063" y2="80" stroke="#00FFFF" stroke-width="3"   opacity="0.65" filter="url(#glow)"/>
+  <line x1="3155" y1="80" x2="3175" y2="80" stroke="#00FFFF" stroke-width="3"   opacity="0.75" filter="url(#glow)"/>
+  <line x1="3260" y1="80" x2="3280" y2="80" stroke="#00FFFF" stroke-width="3"   opacity="0.75" filter="url(#glow)"/>
+  <line x1="3368" y1="80" x2="3388" y2="80" stroke="#00FFFF" stroke-width="3"   opacity="0.8"  filter="url(#glow)"/>
+  <line x1="3612" y1="80" x2="3632" y2="80" stroke="#00FFFF" stroke-width="3"   opacity="0.8"  filter="url(#glow)"/>
+  <line x1="3720" y1="80" x2="3740" y2="80" stroke="#00FFFF" stroke-width="3"   opacity="0.75" filter="url(#glow)"/>
+  <line x1="3825" y1="80" x2="3845" y2="80" stroke="#00FFFF" stroke-width="3"   opacity="0.75" filter="url(#glow)"/>
+  <line x1="3937" y1="80" x2="4120" y2="80" stroke="#00FFFF" stroke-width="3"   opacity="0.65" filter="url(#glow)"/>
+  <line x1="4215" y1="80" x2="6980" y2="80" stroke="#00FFFF" stroke-width="3"   opacity="0.5"  filter="url(#glow)"/>
+
+  <!-- === LEFT TICK CLUSTER === -->
+  <line x1="2796" y1="64"  x2="2796" y2="96"  stroke="#00FFFF" stroke-width="3"   opacity="0.35" filter="url(#glow)"/>
+  <line x1="2815" y1="52"  x2="2815" y2="108" stroke="#00FFFF" stroke-width="4.5" opacity="0.75" filter="url(#glow)"/>
+  <line x1="2834" y1="62"  x2="2834" y2="98"  stroke="#00FFFF" stroke-width="3"   opacity="0.5"  filter="url(#glow)"/>
+  <line x1="2853" y1="56"  x2="2853" y2="104" stroke="#00FFFF" stroke-width="3.8" opacity="0.6"  filter="url(#glow)"/>
+  <line x1="2872" y1="68"  x2="2872" y2="92"  stroke="#00FFFF" stroke-width="3"   opacity="0.35" filter="url(#glow)"/>
+
+  <!-- === RIGHT TICK CLUSTER === -->
+  <line x1="4128" y1="68"  x2="4128" y2="92"  stroke="#00FFFF" stroke-width="3"   opacity="0.35" filter="url(#glow)"/>
+  <line x1="4147" y1="56"  x2="4147" y2="104" stroke="#00FFFF" stroke-width="3.8" opacity="0.6"  filter="url(#glow)"/>
+  <line x1="4166" y1="62"  x2="4166" y2="98"  stroke="#00FFFF" stroke-width="3"   opacity="0.5"  filter="url(#glow)"/>
+  <line x1="4185" y1="52"  x2="4185" y2="108" stroke="#00FFFF" stroke-width="4.5" opacity="0.75" filter="url(#glow)"/>
+  <line x1="4204" y1="64"  x2="4204" y2="96"  stroke="#00FFFF" stroke-width="3"   opacity="0.35" filter="url(#glow)"/>
+
+  <!-- === RHOMBUS A (cx=3108) === -->
+  <polygon points="3063,80 3108,58 3155,80 3108,102"
+    fill="none" stroke="#00FFFF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <polygon points="3063,80 3108,58 3155,80 3108,102"
+    fill="#00FFFF" opacity="0.1" filter="url(#bloom)"/>
+
+  <!-- === LEFT INNER DIAMOND (cx=3218) === -->
+  <polygon points="3175,80 3218,54 3260,80 3218,106"
+    fill="none" stroke="#00FFFF" stroke-width="3.8" opacity="0.85" filter="url(#glow)"/>
+  <polygon points="3175,80 3218,54 3260,80 3218,106"
+    fill="#00FFFF" opacity="0.13" filter="url(#bloom)"/>
+  <circle cx="3218" cy="80" r="5.5" fill="#00FFFF" filter="url(#glow)"/>
+
+  <!-- === RHOMBUS B (cx=3324) === -->
+  <polygon points="3280,80 3324,58 3368,80 3324,102"
+    fill="none" stroke="#00FFFF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <polygon points="3280,80 3324,58 3368,80 3324,102"
+    fill="#00FFFF" opacity="0.1" filter="url(#bloom)"/>
+
+  <!-- === CENTER DIAMOND (cx=3500) === -->
+  <polygon points="3500,12 3612,80 3500,148 3388,80"
+    fill="#00FFFF" opacity="0.07" filter="url(#bloom2)"/>
+  <polygon points="3500,20 3604,80 3500,140 3396,80"
+    fill="#00FFFF" opacity="0.1" filter="url(#bloom)"/>
+  <polygon points="3500,20 3604,80 3500,140 3396,80"
+    fill="none" stroke="#00FFFF" stroke-width="4.5" filter="url(#glow)"/>
+  <polygon points="3500,44 3580,80 3500,116 3420,80"
+    fill="none" stroke="#00FFFF" stroke-width="2.5" opacity="0.5"/>
+  <polygon points="3500,44 3580,80 3500,116 3420,80"
+    fill="#00FFFF" opacity="0.14" filter="url(#bloom)"/>
+  <circle cx="3500" cy="80" r="11" fill="#00FFFF" filter="url(#bloom2)"/>
+  <circle cx="3500" cy="80" r="5.5" fill="#ffffff" opacity="0.9"/>
+
+  <!-- === RHOMBUS C (cx=3676) === -->
+  <polygon points="3632,80 3676,58 3720,80 3676,102"
+    fill="none" stroke="#00FFFF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <polygon points="3632,80 3676,58 3720,80 3676,102"
+    fill="#00FFFF" opacity="0.1" filter="url(#bloom)"/>
+
+  <!-- === RIGHT INNER DIAMOND (cx=3782) === -->
+  <polygon points="3740,80 3782,54 3825,80 3782,106"
+    fill="none" stroke="#00FFFF" stroke-width="3.8" opacity="0.85" filter="url(#glow)"/>
+  <polygon points="3740,80 3782,54 3825,80 3782,106"
+    fill="#00FFFF" opacity="0.13" filter="url(#bloom)"/>
+  <circle cx="3782" cy="80" r="5.5" fill="#00FFFF" filter="url(#glow)"/>
+
+  <!-- === RHOMBUS D (cx=3891) === -->
+  <polygon points="3845,80 3891,58 3937,80 3891,102"
+    fill="none" stroke="#00FFFF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <polygon points="3845,80 3891,58 3937,80 3891,102"
+    fill="#00FFFF" opacity="0.1" filter="url(#bloom)"/>
+
+</svg>
